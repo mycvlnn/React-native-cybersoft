@@ -1,0 +1,66 @@
+/* reset css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  background-color: rgba(204, 204, 204, 0.918);
+  padding: 16px;
+}
+.app-title {
+  margin-bottom: 20px;
+}
+.app-product {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -16px;
+  padding: 0 8px;
+}
+
+.card-item {
+  width: 50%;
+  padding: 0 8px;
+  margin-top: 16px;
+}
+.card-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+.card-head {
+  text-align: right;
+  margin-bottom: 16px;
+}
+.card-icon {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 81, 0);
+}
+
+.card-image {
+  width: 100%;
+}
+.card-foot {
+  margin-top: 16px;
+}
+.card-name {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.card-cost {
+  margin-top: 6px;
+  font-size: 14px;
+}
