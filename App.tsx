@@ -1,12 +1,25 @@
-import React from 'react'
-import { View, Text } from 'react-native'
+import React, { ReactNode } from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-const App = () => {
+const App = (): ReactNode => {
   return (
-    <View>
-      <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Hello world</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Hello world</Text>
     </View>
   )
 }
 
 export default App
+
+const styles = StyleSheet.create({
+  container:{
+    flex: 1,
+    justifyContent: 'center'
+  },
+  text:{
+    textAlign:'center', 
+    fontSize: 16,
+    fontWeight: 'bold', 
+    color: 'black'
+  }
+})
