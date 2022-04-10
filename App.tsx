@@ -1,25 +1,45 @@
-import React, { ReactNode } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import Card from "components/UI/Card";
+import React, { ReactNode } from "react";
+import { View, StyleSheet } from "react-native";
+
+const cardList = [
+  {
+    id: 1,
+    name: "Purple",
+    color: "#C9C9FF",
+  },
+  {
+    id: 2,
+    name: "Blue",
+    color: "#3D85C6",
+  },
+  {
+    id: 3,
+    name: "Green",
+    color: "#96CC96",
+  },
+  {
+    id: 4,
+    name: "Yellow",
+    color: "#F4B940",
+  },
+];
 
 const App = (): ReactNode => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello world</Text>
-    </View>
-  )
-}
+  const renderCardList = () => {
+    return cardList.map(({ name, color, id }) => {
+      return <Card key={id} name={name} color={color} />;
+    });
+  };
 
-export default App
+  return <View style={styles.container}>{renderCardList()}</View>;
+};
+
+export default App;
 
 const styles = StyleSheet.create({
-  container:{
+  container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
-  text:{
-    textAlign:'center', 
-    fontSize: 16,
-    fontWeight: 'bold', 
-    color: 'black'
-  }
-})
+});
