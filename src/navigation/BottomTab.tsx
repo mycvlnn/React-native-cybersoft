@@ -7,8 +7,9 @@ import {FontFamily, FontSize} from 'constants/Fonts'
 import IconButton from 'components/Base/Icons/IconButton'
 import {Icons} from 'constants/Icons'
 import Icon from 'components/Base/Icons/Icon'
+import {RootStackParamList} from './type'
 
-const Tab = createBottomTabNavigator()
+const Tab = createBottomTabNavigator<RootStackParamList>()
 
 const BottomTab = () => {
   return (
@@ -19,7 +20,7 @@ const BottomTab = () => {
           backgroundColor: Colors.backgroundButton,
           paddingVertical: 10,
           paddingHorizontal: 40,
-          borderRadius: 30,
+          borderRadius: 20,
           overflow: 'hidden',
           fontFamily: FontFamily.primary,
           fontWeight: 'bold',
@@ -33,9 +34,12 @@ const BottomTab = () => {
         },
         headerLeft: () => <IconButton src={Icons.location} size={22} />,
         headerRight: () => <IconButton src={Icons.shoppingBasket} size={22} />,
-
         tabBarActiveTintColor: Colors.primary,
-        tabBarShowLabel: false
+        tabBarShowLabel: false,
+        headerStyle: {
+          height: 80
+        },
+        headerShadowVisible: false
       }}>
       <Tab.Screen
         name="Home"

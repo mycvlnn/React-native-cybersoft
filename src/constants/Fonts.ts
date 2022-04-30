@@ -1,5 +1,5 @@
 export const FontFamily = {
-  primary: 'Roboto-Bold'
+  primary: 'Roboto-Regular'
 }
 
 export const FontSize = {

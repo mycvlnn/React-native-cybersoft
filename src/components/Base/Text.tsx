@@ -1,10 +1,10 @@
 //Custom Text
-import {FontSize} from 'constants/Fonts'
+import {FontFamily, FontSize} from 'constants/Fonts'
 import React from 'react'
 import {StyleSheet, Text as RNText, TextStyle} from 'react-native'
 
 interface IProp {
-  style?: TextStyle
+  style?: TextStyle | any
 }
 
 const Text: React.FC<IProp> = ({children, style}) => {
@@ -15,7 +15,8 @@ export default Text
 
 const styles = StyleSheet.create({
   text: {
-    fontFamily: 'Roboto-Bold',
-    fontSize: FontSize.normal
+    fontFamily: FontFamily.primary,
+    fontSize: FontSize.normal,
+    color: '#000'
   }
 })
